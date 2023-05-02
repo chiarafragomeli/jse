@@ -17,8 +17,14 @@ public class Exercise {
      * @param args not used
      */
     public static void main(String[] args) {
-        // TODO
+        String[] words = {"one", "two", "three", "four"};
+        System.out.println("My array has " + words.length + " elements.");
 
+        // String[] words = new String[4];
+        // words[0] = "one"; ... e così via
+        
+        System.out.println("The last element is \"" +  words[words.length-1]  + "\".");
+     
         System.out.println("Done");
     }
 }
