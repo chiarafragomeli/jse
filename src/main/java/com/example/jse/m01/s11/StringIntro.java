@@ -4,7 +4,6 @@
  * https://github.com/egalli64/jse
  */
 package com.example.jse.m01.s11;
-
 /**
  * Introduction to String, StringBuilder, text block
  */
@@ -42,7 +41,7 @@ public class StringIntro {
         String classic = "Non impedir lo suo fatale andare:\n" + //
                 "vuolsi così colà dove si puote\n" + //
                 "ciò che si vuole, e più non dimandare";
-
+        
         System.out.println(modern);
         System.out.println("---");
         System.out.println(classic);

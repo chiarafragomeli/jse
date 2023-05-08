@@ -20,6 +20,9 @@ public class Exercise2 {
         boolean[] flags = { true, false, false };
         System.out.println(Arrays.toString(flags));
 
-        // TODO
+        for (int i = 0; i < flags.length; i++) {
+            flags[i] = !flags[i];
+        }
+        System.out.println("My swapped array is: " + Arrays.toString(flags));
     }
 }

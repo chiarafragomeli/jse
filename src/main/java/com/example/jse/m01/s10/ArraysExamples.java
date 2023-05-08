@@ -24,7 +24,8 @@ public class ArraysExamples {
     public static void main(String[] args) {
         int[] base = { 6, 2, 4, 5, 3 };
         System.out.print("The base array: ");
-        System.out.println(Arrays.toString(base));
+        System.out.print(base+" "); //non posso stampare direttamente un array
+        System.out.println(Arrays.toString(base)); //per stampare uso il metodo toString della classe Arrays
 
         // create a copy of one w/ length increased by 2
         int[] extended = Arrays.copyOf(base, base.length + 2);

@@ -17,6 +17,11 @@ public class Exercise3 {
      * @param args each argument is going to be printed
      */
     public static void main(String[] args) {
-        // TODO
+        int i = 0;
+        System.out.println("The number of arguments is " + args.length);
+        while (i < args.length) {
+            System.out.println("The " + i + " argument is: " + args[i]);
+            i++;
+        }
     }
 }

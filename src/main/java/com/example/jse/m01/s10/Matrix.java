@@ -35,7 +35,7 @@ public class Matrix {
         System.out.println(matrix.toString());
         // disappointing
         System.out.print("Arrays::toString() is not enough for multidimensional arrays: ");
-        System.out.println(Arrays.toString(matrix));
+        System.out.println(Arrays.toString(matrix)); //usiamo :: al posto di . nella stampa
         // this is what we need here
         System.out.print("Arrays::deepToString() is what we need here: ");
         System.out.println(Arrays.deepToString(matrix));

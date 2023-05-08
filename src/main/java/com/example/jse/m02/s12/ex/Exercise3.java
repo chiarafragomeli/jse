@@ -15,6 +15,12 @@ public class Exercise3 {
      * @param args each argument is going to be printed
      */
     public static void main(String[] args) {
-        // TODO
+        for (int i = 0; i < args.length; i++) {
+            System.out.println("My element (for) is: " + args[i]);
+        }
+        System.out.println("\n");
+        for (String cur : args) {
+            System.out.println("My element (for-each) is: " + cur);
+        }
     }
 }

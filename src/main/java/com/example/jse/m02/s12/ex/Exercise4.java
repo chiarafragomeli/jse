@@ -20,6 +20,10 @@ public class Exercise4 {
      * @param args The caller could pass us 0 ... n arguments
      */
     public static void main(String[] args) {
-        // TODO
+        String[] str = { "ciao", "hello" };
+        for (int i = 0; i < Math.min(str.length, 3); i++) {
+
+            System.out.println(str[i]);
+        }
     }
 }

@@ -5,6 +5,8 @@
  */
 package com.example.jse.m01.s10;
 
+import java.util.Arrays;
+
 /**
  * Exercise on two-dimensional array
  */
@@ -23,8 +25,17 @@ public class MatrixArraysExercise {
      * @param args not used
      */
     public static void main(String[] args) {
-        // TODO
-
+     //creazione della matrice
+        String[][] greetings = {//
+                {"ciao", "buongiorno"},//
+                {"hello", "good morning"}//
+        };
+     //  String[][] greetings = {{"ciao", "buongiorno"},{"hello", "good morning"}};
+     //stampa   
+        System.out.println("The first English greeting is \"" + greetings[1][0] + "\".");
+        System.out.println("The Italian greetings are " + Arrays.toString(greetings[0]) + ".");
+        System.out.println("The length of my array is " + greetings.length);
+        System.out.println("My array is " + Arrays.deepToString(greetings));
         System.out.println("Done");
     }
 }

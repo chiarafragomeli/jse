@@ -16,18 +16,31 @@ public class Exercise5 {
      */
     public static void main(String[] args) {
         int a = 10;
-        int b = 3;
+        int b = 7;
 
         int multi = a * b;
         System.out.println("a * b = " + multi);
-        // TODO (1) Get the same result without multiplying
+        int myMulti = 0;
+        for (int i = 0; i < b; i++) {
+            myMulti += a;
+        }
+        System.out.println("\nMy multiplication is: " + myMulti);
 
         int div = a / b;
-        System.out.println("a / b = " + div);
+        System.out.println("\na / b = " + div);
         // TODO (2) Get the same result without dividing
 
+        int divisor = Math.min(a, b);
+        int dividend = Math.max(a, b);
+        int myDiv = dividend;
+        int i = 0;
+        for (myDiv = dividend; myDiv > divisor; myDiv -= divisor) {
+            i++;
+        }
+        System.out.println("\nMy division is: " + i);
+        System.out.println("\nMy modulo is: " + myDiv);
         int mod = a % b;
-        System.out.println("a % b = " + mod);
+        System.out.println("\na % b = " + mod);
         // TODO (3) Get the same result without using the modulo operator
     }
 }

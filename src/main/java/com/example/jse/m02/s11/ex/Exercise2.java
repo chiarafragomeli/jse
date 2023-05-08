@@ -21,7 +21,61 @@ public class Exercise2 {
     public static void main(String[] args) {
         boolean[] flags = { true, false, false };
         System.out.println(Arrays.toString(flags));
+        
+        int i = 0;
+        while (i<flags.length) {
+            /*if (flags[i] == true) {
+                flags[i] = false;
+            } else {
+                flags[i] = true;
+            }
+            */
+            
+            flags[i] = !flags[i];
+            
+            i++;
+        }
+        System.out.println(Arrays.toString(flags));
+        
+        i = 0;
+        
+        do {
+            if (flags[i] == true) {
+                flags[i] = false;
+            } else {
+                flags[i] = true;
+            }
+            i++;
+        } while (i<flags.length);
+        System.out.println(Arrays.toString(flags));
+        
+        
+        
+        
 
-        // TODO
+        /*int i = 0;
+        int j = 0;
+        System.out.println("\nDo method\n");
+        while (j < 2) {
+            while (i < flags.length) {
+                if (flags[i] == true) {
+                    flags[i] = false;
+                } else {
+                    flags[i] = true;
+
+                }
+                i++;
+            }
+            System.out.println("My " + j + " times swapped arrays is:");
+            System.out.println(Arrays.toString(flags) + "\n");
+            i = 0;
+            j++;
+        }
+        System.out.println("\nMy two times swapped arrays is:");
+        System.out.println(Arrays.toString(flags));
+
+        System.out.println("\nDo-while method\n");
+        j = 0;
+        i=0;*/
     }
 }

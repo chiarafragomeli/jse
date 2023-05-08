@@ -4,7 +4,6 @@
  * https://github.com/egalli64/jse
  */
 package com.example.jse.m01.s09;
-
 /**
  * A very simple exercise in three steps on array
  */

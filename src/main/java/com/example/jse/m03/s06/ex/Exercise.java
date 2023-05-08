@@ -20,8 +20,19 @@ public class Exercise {
      * @return uppercase version of input
      */
     public String toUpper(String s) {
-        // TODO: create an uppercase version of the input and return it
-        throw new UnsupportedOperationException("Not yet implemented");
+        if(s == null) {
+            return null;
+        }
+        StringBuilder strUp = new StringBuilder();
+        char c = ' ';
+        for (int i = 0; i < s.length(); i++) {
+            c = s.charAt(i);
+            if (c >= 'a' && c <= 'z') {
+                c = (char) (c -= ('a' - 'A'));
+            }
+            strUp.append(c);
+        }
+        return strUp.toString();
     }
 
     /**
@@ -32,7 +43,17 @@ public class Exercise {
      * @return the encrypted string
      */
     public String caesarEncrypt(String s, int shift) {
-        // TODO: create an encrypted version of the input and return it
-        throw new UnsupportedOperationException("Not yet implemented");
+        StringBuilder caesar = new StringBuilder();
+        char c = ' ';
+        if (shift < 0) {
+            shift = 26 + (shift % 26);
+          }
+        for (int i = 0; i < s.length(); i++) {
+            c = s.charAt(i);
+            c = (char) ((c - 'A' + shift) % 26 + 'A');
+            caesar.append(c);
+        }
+        return caesar.toString();
+
     }
 }
