@@ -73,7 +73,7 @@ public class MyMatrix {
      * Returns an array containing all values of the anti-diagonal
      * 
      * @param matrix
-     * @return array containg all values of the anti-diagonal
+     * @return array containing all values of the anti-diagonal
      */
     public static int[] antiDiagonal(int[][] matrix) {
         if (matrix.length == 0) {

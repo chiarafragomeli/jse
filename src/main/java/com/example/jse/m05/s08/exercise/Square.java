@@ -11,7 +11,8 @@ package com.example.jse.m05.s08.exercise;
  * @see Main the user class
  */
 public class Square {
-    // TODO: every square should have its own side length
+    // every square should have its own side length
+    double side;
 
     /**
      * Constructor
@@ -19,7 +20,8 @@ public class Square {
      * @param side the square side
      */
     public Square(double side) {
-        // TODO: initialize the current side length
+        // initialize the current side length
+        this.side = side;
     }
 
     /**
@@ -28,7 +30,7 @@ public class Square {
      * @return the square area
      */
     public double area() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return Math.pow(side, 2);
     }
 
     /**
@@ -37,6 +39,6 @@ public class Square {
      * @return the square perimeter
      */
     public double perimeter() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return side * 4;
     }
 }

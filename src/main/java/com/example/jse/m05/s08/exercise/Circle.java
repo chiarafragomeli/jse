@@ -11,7 +11,8 @@ package com.example.jse.m05.s08.exercise;
  * @see Main the user class
  */
 public class Circle {
-    // TODO: every circle should have its own radius
+    // every circle should have its own radius
+    private double radius;
 
     /**
      * Constructor
@@ -19,7 +20,8 @@ public class Circle {
      * @param radius the circle radius
      */
     public Circle(double radius) {
-        // TODO: initialize the current circle radius
+        // initialize the current circle radius
+        this.radius = radius;
     }
 
     /**
@@ -28,7 +30,8 @@ public class Circle {
      * @return the circle area
      */
     public double area() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return Math.PI * (Math.pow(radius, 2));
+        
     }
 
     /**
@@ -37,6 +40,6 @@ public class Circle {
      * @return the circle perimeter
      */
     public double perimeter() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        return Math.PI * (radius * 2);
     }
 }
