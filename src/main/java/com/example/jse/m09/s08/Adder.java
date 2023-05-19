@@ -23,7 +23,7 @@ public class Adder {
         System.out.println("Please, enter a few numbers");
         double result = 0.0;
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); // System.in in contrapposizione a System.out, legge dalla tastiera
         while (scanner.hasNext()) {
             if (scanner.hasNextDouble()) {
                 result += scanner.nextDouble();

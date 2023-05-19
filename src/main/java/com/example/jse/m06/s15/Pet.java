@@ -8,7 +8,7 @@ package com.example.jse.m06.s15;
 /**
  * Pet is a Brushable
  */
-public abstract class Pet implements Brushable {
+public abstract class Pet implements Brushable { // è una classe astratta e non può essere istanziata, ma può avere classi figlie
     private String name;
 
     /**
@@ -37,5 +37,5 @@ public abstract class Pet implements Brushable {
     /**
      * The specific noise for a pet. Each pet should have its own
      */
-    public abstract void makeNoise();
+    public abstract void makeNoise(); // metodo astratto: è un metodo privo di implementazione che fa parte di una classe astratta
 }

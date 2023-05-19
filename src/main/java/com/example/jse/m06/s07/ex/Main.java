@@ -14,13 +14,20 @@ package com.example.jse.m06.s07.ex;
  */
 public class Main {
     public static void main(String[] args) {
-        Object tom = new Cat();
+        Object tom = new Cat("Tom", 2);
         System.out.println(tom.toString());
         System.out.println("***");
 
-        // TODO: put a cat, a dog, and a mouse in the array
-        Object[] objects = new Object[0];
+        /*Dog dog = new Dog("Cane");
+        Mouse mouse = new Mouse("Topo");*/
 
+        // put a cat, a dog, and a mouse in the array
+        Object[] objects = {tom, new Dog("Cane"), new Mouse("Topo")};
+        /*objects[0] = tom;
+        objects[1] = dog;
+        objects[2] = mouse;*/
+
+        System.out.println("My array is:");
         for (int i = 0; i < objects.length; i++) {
             System.out.println(objects[i].toString());
         }

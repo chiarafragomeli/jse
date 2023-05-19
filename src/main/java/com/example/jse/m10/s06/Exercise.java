@@ -5,7 +5,11 @@
  */
 package com.example.jse.m10.s06;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
+import java.util.TreeSet;
 
 /**
  * HashSet exercise
@@ -24,8 +28,17 @@ public class Exercise {
      * @param data a collection, possibly with duplicates
      * @return the original data stripped of duplicates
      */
+
+    public static void main(String[] args) {
+        List<Integer> list = List.of(12, 53, 12, 35);
+        Exercise exercise = new Exercise();
+
+        Collection<Integer> collection = exercise.singles(list);
+        System.out.println(collection);
+    }
+
     public Collection<Integer> singles(Collection<Integer> data) {
-        // TODO
-        throw new UnsupportedOperationException("Not yet implemented");
+//        return new HashSet<>(data); //disordinato
+        return new TreeSet<>(data); // ordinato
     }
 }

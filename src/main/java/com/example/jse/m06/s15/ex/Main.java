@@ -5,6 +5,9 @@
  */
 package com.example.jse.m06.s15.ex;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Exercise: create a hierarchy of classes based on Actor
  * <p>
@@ -27,17 +30,38 @@ public class Main {
      * @param args not used
      */
     public static void main(String[] args) {
-        // TODO: create actors, both warriors and wizards
-        Actor[] actors = { /* ... */ };
+        // create actors, both warriors and wizards
+        List<Actor> actors = new ArrayList<>(List.of(new Warrior("Aragorn", 20), new Warrior("Boromir", 18),
+                new Wizard("Gandalf", 40), new Wizard("Saruman", 35)));
+
+//        Actor[] actors = { new Warrior("Aragorn", 20), new Warrior("Boromir", 18), new Wizard("Gandalf", 40),
+//                new Wizard("Saruman", 35) };
 
         for (Actor actor : actors) {
             System.out.println(actor);
         }
 
-        System.out.println("Let's fight ...");
+        boolean winner = false;
+
+        System.out.println("\nLet's fight ...\n");
+        
         for (Actor actor : actors) {
-            System.out.println("Actor: " + actor);
-            // ...
+            for (Actor actor2 : actors) {
+                if (actor != actor2) {
+                    System.out.println("Fighters: " + actor + " vs " + actor2);
+                    winner = actor.fight(actor2);
+                    System.out.println("\n");
+                    if (winner) {
+                        actors.remove(actor2);
+                    } else {
+                        actors.remove(actor);
+                    }
+                }
+            }
         }
+        System.out.println("Survivors:\n");
+
+        System.out.println(actors);
+
     }
 }

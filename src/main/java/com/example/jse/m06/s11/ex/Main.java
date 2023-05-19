@@ -12,21 +12,33 @@ import java.util.Arrays;
  */
 public class Main {
     /**
-     * See requests in the "to do" comments
      * 
      * @param args not used
      */
     public static void main(String[] args) {
-        // TODO: (1) put objects of (at least) three different types in this array
-        Vehicle[] vehicles = {};
-        System.out.println(Arrays.toString(vehicles));
+        // (1) put objects of (at least) three different types in this array
+        Vehicle[] vehicles = { new MotorBike("A7363"), new Bus("D3938"), new Car("J2836") };
+        System.out.println(Arrays.toString(vehicles) + "\n");
 
-        // TODO: (2) let all vehicle steer in alternate directions
+        // (2) let all vehicle steer in alternate directions
+        for (int i = 0; i < vehicles.length; i++) {
+            if (i % 2 == 0) {
+                System.out.print(vehicles[i] + " ");
+                vehicles[i].steer(Direction.LEFT);
+            } else {
+                System.out.print(vehicles[i] + " ");
+                vehicles[i].steer(Direction.RIGHT);
+            }
+        }
 
-        // TODO: (3) put objects of (at least) three different types in this array
-        Conditioning[] conditionings = {};
+        System.out.println(" ");
+        // (3) put objects of (at least) three different types in this array
+        Conditioning[] conditionings = { new Bus("B6567"), new Flat("Corsica 43"), new Car("F8363") };
         System.out.println(Arrays.toString(conditionings));
 
-        // TODO: (4) set the temperature of each conditioned to 20
+        // (4) set the temperature of each conditioned to 20
+        for (int i = 0; i < conditionings.length; i++) {
+            conditionings[i].tempCond(20);
+        }
     }
 }

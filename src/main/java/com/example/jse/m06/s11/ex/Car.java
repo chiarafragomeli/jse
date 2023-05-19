@@ -8,15 +8,25 @@ package com.example.jse.m06.s11.ex;
 import java.util.logging.Logger;
 
 /**
- * TODO: is-a Vehicle and Conditioning
+ * Car is-a Vehicle and Conditioning
  */
-public class Car {
+public class Car extends Vehicle implements Conditioning {
     private static final Logger log = Logger.getGlobal();
 
-    /**
-     * No-arg constructor
-     */
-    public Car() {
-        log.info("Car created");
+    String plate;
+
+    public Car(String plate) {
+        log.info("Car created with number plate: " + plate);
+        this.plate = plate;
+    }
+
+    @Override
+    public void tempCond(int t) {
+        log.info("Car temperature is " + t);
+    }
+
+    @Override
+    public String toString() {
+        return "Car [plate=" + plate + "]";
     }
 }

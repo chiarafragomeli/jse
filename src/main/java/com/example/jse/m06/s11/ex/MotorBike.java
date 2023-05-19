@@ -8,15 +8,20 @@ package com.example.jse.m06.s11.ex;
 import java.util.logging.Logger;
 
 /**
- * TODO: MotorBike is-a Vehicle
+ * MotorBike is-a Vehicle
  */
-public class MotorBike {
+public class MotorBike extends Vehicle {
     private static final Logger log = Logger.getGlobal();
 
-    /**
-     * No-arg constructor
-     */
-    public MotorBike() {
-        log.info("MotorBike created");
+    String plate;
+
+    public MotorBike(String plate) {
+        log.info("MotorBike created with number plate: " + plate);
+        this.plate = plate;
+    }
+
+    @Override
+    public String toString() {
+        return "MotorBike [plate=" + plate + "]";
     }
 }

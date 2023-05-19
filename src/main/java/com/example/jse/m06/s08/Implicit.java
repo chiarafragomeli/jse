@@ -8,7 +8,7 @@ package com.example.jse.m06.s08;
 /**
  * An interface, details are left implicit
  */
-interface Implicit {
+public interface Implicit {
     /** a constant, implicitly public static final */
     int XYZ = 42;
 

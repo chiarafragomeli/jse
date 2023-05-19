@@ -16,11 +16,12 @@ public class Main {
      */
     public static void main(String[] args) {
         // a cat is a pet is a brushable
-        Brushable kim = new Cat("Kim");
+        Brushable kim = new Cat("Kim"); // l'interfaccia deve avere un reference, il Cat in questo caso mi interessa
+                                        // solo perché è brushable
         kim.brush();
 
         // let kim barks, but only if it is a dog
-        if (kim instanceof Dog) {
+        if (kim instanceof Dog) { // Kim è un cane? No, quindi non entra nell'if
             // downcast protected by instanceof
             Dog dog = (Dog) kim;
             dog.bark();
@@ -65,17 +66,17 @@ public class Main {
      * 
      * @param pets a few pets
      */
-    static void f(Pet[] pets) {
+    static void f(Pet[] pets) { // mi viene passato un array di Pet, ma non so cosa c'è dentro
         if (pets == null) {
             return;
         }
 
         System.out.println("Let each pet bark or meow ...");
         for (Pet pet : pets) {
-            if (pet instanceof Dog) {
+            if (pet instanceof Dog) { // pet è un cane? Se sì, downcasto pet a dog e lo faccio abbaiare
                 Dog dog = (Dog) pet;
                 dog.bark();
-            } else if (pet instanceof Cat) {
+            } else if (pet instanceof Cat) { // pet è un gatto? Se sì, downcasto il pet a cat e lo faccio miagolare
                 ((Cat) pet).meow();
             }
         }
@@ -93,7 +94,8 @@ public class Main {
 
         System.out.println("Let each pet make its noise  ...");
         for (Pet pet : pets) {
-            pet.makeNoise();
+            pet.makeNoise(); // il metodo makeNoise della classe Pet in Cat e Dog è override con i metodi
+                             // meow() e bark()
         }
     }
 }

@@ -11,5 +11,14 @@ package com.example.jse.m06.s07.ex;
  * Any class derives from Object, implicitly or explicitly
  */
 public class Dog {
-    // TODO: override toString()
+    private String name;
+
+    public Dog(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Dog [name = " + name + "]";
+    }
 }

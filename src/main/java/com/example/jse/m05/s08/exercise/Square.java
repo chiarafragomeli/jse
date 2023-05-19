@@ -13,7 +13,7 @@ package com.example.jse.m05.s08.exercise;
 public class Square {
     // every square should have its own side length
     double side;
-
+    
     /**
      * Constructor
      * 

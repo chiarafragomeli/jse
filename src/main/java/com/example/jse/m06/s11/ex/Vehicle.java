@@ -5,20 +5,30 @@
  */
 package com.example.jse.m06.s11.ex;
 
-import java.util.logging.Logger;
-
 /**
  * Base of a class hierarchy
  * <P>
- * TODO: it should steer left/right, it should brake
  */
 public class Vehicle {
-    private static final Logger log = Logger.getGlobal();
 
-    /**
-     * No-arg constructor
-     */
-    public Vehicle() {
-        log.info("Vehicle created");
+    @Override
+    public String toString() {
+        return "Vehicle []";
+    }
+
+    public void steer(Direction dir) {
+        if (dir == Direction.LEFT || dir == Direction.RIGHT) {
+            System.out.print("is steering to the " + dir + "\n");
+        } else {
+            System.out.println("I can't steer!");
+        }
+    }
+
+    public void brake(String brake) {
+        if (brake.equals("brake")) {
+            System.out.println("Brake!");
+        } else {
+            System.out.println("I can't brake!");
+        }
     }
 }

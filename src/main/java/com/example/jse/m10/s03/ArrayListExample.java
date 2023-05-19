@@ -18,20 +18,20 @@ public class ArrayListExample {
      * @param args not used
      */
     public static void main(String[] args) {
-        List<Integer> list0 = new ArrayList<>();
+        List<Integer> list0 = new ArrayList<>(); // Liskov ; creazione array vuoto
         recap("An empty list", list0);
 
-        List<Integer> list1 = new ArrayList<Integer>(5);
+        List<Integer> list1 = new ArrayList<Integer>(5); // gli dico quanti elementi voglio nell'array
         recap("An empty list w/ given (5) capacity", list1);
 
         // adding an element in the last position
         list1.add(56);
         // adding an element in the first position
-        list1.add(0, 18);
-        list1.add(42);
+        list1.add(0, 18); // primo argomento è la posizione, il secondo il valore
+        list1.add(42); // la posizione non è specificata, il valore è messo in fondo (operazione più veloce)
         recap("After adding elements", list1);
 
-        ArrayList<Integer> list2 = new ArrayList<>(list1);
+        ArrayList<Integer> list2 = new ArrayList<>(list1); // copia di un array
         recap("A list by copy constructor", list2);
 
         Integer value = list2.get(0);
@@ -51,7 +51,7 @@ public class ArrayListExample {
     /**
      * Utility method to print some information on a list
      */
-    private static void recap(String message, List<?> lst) {
+    private static void recap(String message, List<?> lst) { // <?> per dire che non sappiamo cosa c'è in quella lista
         System.out.printf("%s: %s, current size %d%n", message, lst, lst.size());
     }
 }

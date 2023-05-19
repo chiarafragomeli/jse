@@ -19,6 +19,14 @@ public class Man {
         this.name = DEFAULT_NAME;
     }
 
+    
+    
+    public static String getName() {
+        return DEFAULT_NAME;
+    }
+
+
+
     /**
      * Canonical constructor
      * 
